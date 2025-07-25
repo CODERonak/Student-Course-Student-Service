@@ -1,5 +1,7 @@
 package com.studentcourse.StudentService.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,5 +19,6 @@ public class Student {
     private Long id;
     private String fullname;
     private Integer age;
+    private LocalDate dateOfBirth;
     private String email;
 }
