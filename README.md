@@ -79,7 +79,7 @@ This service communicates with:
 | Service                                                                   | Description                              | Repository |
 | ------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
 | 🎓 `student-service`                                                      | *You are here*                           |            |
-| 📘 [`course-service`](coming soon)         | Course management and CRUD               |            |
+| 📘 [`course-service`](https://github.com/CODERonak/Student-Course-Course-Service)         | Course management and CRUD               |            |
 | 🔗 [`enrollment-service`](coming soon) | Student-course enrollment relationships  |            |
 
 --
