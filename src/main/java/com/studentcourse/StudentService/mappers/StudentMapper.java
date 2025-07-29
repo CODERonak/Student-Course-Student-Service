@@ -8,7 +8,6 @@ import com.studentcourse.StudentService.dto.StudentResponse;
 import com.studentcourse.StudentService.model.Student;
 
 @Mapper(componentModel = "spring")
-
 public interface StudentMapper {
 
    @Mapping(target = "id", ignore = true)

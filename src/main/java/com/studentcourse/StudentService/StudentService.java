@@ -25,6 +25,11 @@ public class StudentService {
         return mapper.toResponseDto(savedStudent);
     }
 
+    public StudentResponse getStudentById(Long id) {
+        Student student = studentRepository.findById(id).orElseThrow();
+        return mapper.toResponseDto(student);
+    }
+
     public List<StudentResponse> getAllStudents() {
         List<Student> students = studentRepository.findAll();
         return students.stream().map(mapper::toResponseDto).toList();

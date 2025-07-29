@@ -1,90 +1,48 @@
----
-
 # 🎓 Student-Service – Student Management Microservice
 
----
+## ✅ Status: Completed
 
-## 🚧 Status: In Development
-
-> ⚠️ **This microservice is currently under active development.**
-> Some features may be incomplete, unstable, or subject to change.
-> It's a simple microservice project.
-> Purpose is to understand the fundamentals or basics of microservices.
+This microservice handles student profile information within a microservices-based **Student-Course Management System**.
 
 ---
 
 ## 🎯 Objective
 
-This service manages **student profile information** as part of a **Student-Course Management System** powered by Spring Boot and a microservices architecture. It communicates with other services like `enrollment-service` and `course-service`.
+Manages **student profiles** including name, email, and a unique user reference. It interacts with other services like `course-service` and `enrollment-service`.
 
 ---
 
 ## ✨ Features
 
-* **Student Profile Management:** Create, update, and retrieve student information (name, email, userId reference).
-* **Inter-Service Compatibility:** Integrates with other microservices using REST or Feign clients.
-* **Data Validation:** DTO-level input validations for clean and consistent data.
+- Create and list student profiles
+- DTO-level input validation
+- Feign/WebClient-based inter-service communication
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-* **Spring Boot** – Java microservice framework
-* **Spring Security** – Role-based and JWT-secured authentication
-* **Spring Data JPA** – Simplified data persistence
-* **MySQL** – Relational database
-* **Java 17+** – Modern Java features and performance
-* **Lombok** – Boilerplate reduction for models
-* **MapStruct** – DTO ↔ Entity mappers
-* **Feign/WebClient** – For inter-service communication
-
----
-
-## 📦 Project Structure
-
-```
-student-service/
-├── controller/StudentController.java     # API endpoints
-├── dto/                                  # DTOs for request/response
-├── model/                                # JPA entities
-├── repository/                           # DB access layer
-├── service/                              # Business logic
-├── application.properties                # Configuration
-└── pom.xml                               # Maven dependencies
-```
+- Spring Boot
+- Spring Security + JWT
+- Spring Data JPA + MySQL
+- Java 17+, Lombok, MapStruct
+- Feign / WebClient for service calls
 
 ---
 
 ## 📚 API Endpoints
 
 | Method | Endpoint    | Description                  |
-| ------ | ----------- | ---------------------------- |
-| `POST` | `/students` | Create a new student profile |
-| `GET`  | `/students` | List all student profiles    |
+|--------|-------------|------------------------------|
+| POST   | /students   | Create a new student profile |
+| GET    | /students   | List all student profiles    |
 
 ---
 
-## 🌐 API Integration
+## 🔗 Related Services
 
-This service communicates with:
-
-* 🔗 \[`enrollment-service`]\(coming soon): Validates student data for enrollments
-
----
-
-## 🔗 Related Microservices
-
-| Service                                                                           | Description                             | Repository                                                           |
-| --------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------- |
-| 🎓 `student-service`                                                              | *You are here*                          | –                                                                    |
-| 📘 [`course-service`](https://github.com/CODERonak/Student-Course-Course-Service) | Course management and CRUD              | [GitHub](https://github.com/CODERonak/Student-Course-Course-Service) |
-| 🔗 \[`enrollment-service`]\(coming soon)                                          | Student-course enrollment relationships | –                                                                    |
-
----
-
-## 🧩 Database
-
-Each microservice uses its **own database**.
-This service connects to **MySQL** with its own schema (or instance) for isolation and modularity.
-
----
+| Service | Description | Repository |
+|--------|-------------|------------|
+| 📘 [`course-service`](https://github.com/CODERonak/Student-Course-Course-Service) | Course CRUD | [GitHub](https://github.com/CODERonak/Student-Course-Course-Service) |
+| 🔗 [`enrollment-service`](https://github.com/CODERonak/Student-Course-Enrollment-Service) | Manages enrollments | [GitHub](https://github.com/CODERonak/Student-Course-Enrollment-Service) |
+| 🧭 [`eureka-server`](https://github.com/CODERonak/Student-Course-Eureka-Server) | Service discovery | [GitHub](https://github.com/CODERonak/Student-Course-Eureka-Server) |
